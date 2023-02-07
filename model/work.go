@@ -15,6 +15,8 @@ type Work struct {
 	ClassId     uint   `gorm:"not null"`              // 类别
 	Title       string `gorm:"not null"`              // 标题
 	EntryUrl    string `gorm:"not null"`              // 内容链接
+	Outlined    string `gorm:"type:varchar(1000)"`    // 当type=1，此字段不为空，否则为空
 	IpTerritory string `gorm:"not null"`              // ip属地
 	ReadNum     string `gorm:"not null;default:0"`    // 阅读量
+	IsVisible   bool   `gorm:"not null;default:1"`    // 默认都是看得见得
 }

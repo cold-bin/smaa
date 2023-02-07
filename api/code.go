@@ -10,8 +10,8 @@ import (
 
 // ResJson http api 请求返回json数据封装
 type ResJson struct {
-	Code int    `json:"status,omitempty"`
-	Msg  string `json:"info,omitempty"`
+	Code int    `json:"code,omitempty"`
+	Msg  string `json:"msg,omitempty"`
 	Data any    `json:"data,omitempty"`
 }
 

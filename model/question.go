@@ -10,4 +10,5 @@ type Question struct {
 	Question string `gorm:"not null"`
 	Items    string `gorm:"not null"`
 	Answer   string `gorm:"not null"`
+	Image    string
 }

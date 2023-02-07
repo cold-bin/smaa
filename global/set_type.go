@@ -30,8 +30,10 @@ type Sms struct {
 }
 
 type App struct {
-	Name string `mapstructure:"name"`
-	Port string `mapstructure:"port"`
+	Name  string `mapstructure:"name"`
+	Port  string `mapstructure:"port"`
+	ExpAt int    `mapstructure:"exp_at"` // access_token过期时间
+	ExpRt int    `mapstructure:"exp_rt"` // refresh_token过期时间
 }
 
 type Mysql struct {

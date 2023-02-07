@@ -3,7 +3,10 @@
 
 package model
 
-import "gorm.io/gorm"
+import (
+	"eliminate-male-appearance-anxiety/global"
+	"gorm.io/gorm"
+)
 
 type BUser struct {
 	gorm.Model
@@ -12,4 +15,9 @@ type BUser struct {
 	Password string `gorm:"type:varchar(255);not null"`
 	Salt     string `gorm:"type:varchar(255);not null"`
 	Level    int    `gorm:"default:0"`
+}
+
+// Create 插入新纪录
+func (u *BUser) Create() error {
+	return global.GDB.Create(u).Error
 }
